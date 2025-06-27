@@ -1,0 +1,71 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: 'Hind', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #515769;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-links {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.navbar-links a {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar-links a.active {
+  color: #007bff;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+}
+
+@media (max-width: 600px) {
+  .navbar-links a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.2rem;
+  }
+}
+
+:host ::ng-deep router-outlet + * {
+  padding-top: 64px;
+}
