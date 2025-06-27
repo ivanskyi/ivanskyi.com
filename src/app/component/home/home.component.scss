@@ -1,161 +1,218 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
+  font-family: 'Hind', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
-  color: #222;
-  min-height: 100vh;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
 }
 
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: 3rem auto 5rem;
-  padding: 2.5rem 3rem;
-  border-radius: 15px;
-  backdrop-filter: saturate(180%) blur(10px);
+.about-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-h2, h3 {
-  color: #2c3e50;
-  margin-bottom: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  user-select: none;
+.about-image-wrapper {
+  flex: 0 0 40%;
+  max-width: 300px;
 }
 
-h2 .highlight {
-  background: linear-gradient(90deg, #4a90e2, #50e3c2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
+.about-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.intro p {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  max-width: 700px;
-  color: #34495e;
-  line-height: 1.7;
-  user-select: text;
-  letter-spacing: 0.02em;
+.about-text-wrapper {
+  flex: 1;
+}
+
+.about-text-wrapper h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.separator {
+  height: 3px;
+  width: 60px;
+  background-color: #007bff;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+
+.about-text-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.skills-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.skills-section h3 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .skills-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 250px;
 }
 
 .skills-list li {
-  background: linear-gradient(135deg, #4a90e2, #50e3c2);
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  color: #3a5dbf;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #e1eaff;
+}
+
+.skills-list img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contacts-section {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   font-size: 1.1rem;
-  box-shadow:
-          0 4px 8px rgba(74, 144, 226, 0.4),
-          0 0 12px rgba(80, 227, 194, 0.6);
-  cursor: default;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #007bff;
 }
 
-.skills-list li:hover,
-.skills-list li:focus {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow:
-          0 8px 16px rgba(74, 144, 226, 0.6),
-          0 0 24px rgba(80, 227, 194, 0.9);
-  outline: none;
+.contact-card i {
+  font-size: 1.8rem;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+.contact-card a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-@keyframes slideUp {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
+.contact-card a:hover {
+  text-decoration: underline;
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow:
-            0 4px 8px rgba(74, 144, 226, 0.4),
-            0 0 12px rgba(80, 227, 194, 0.6);
-  }
-  50% {
-    box-shadow:
-            0 8px 20px rgba(74, 144, 226, 0.7),
-            0 0 32px rgba(80, 227, 194, 1);
-  }
+.courses-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.fade-in {
-  animation: fadeIn 1s forwards;
-  opacity: 0;
-}
-
-.fade-in.delay-1 {
-  animation-delay: 0.5s;
-}
-
-.slide-up {
-  animation: slideUp 1s forwards;
-  opacity: 0;
-}
-
-.pulse {
-  animation: pulseGlow 3s ease-in-out infinite;
-  will-change: box-shadow, transform;
-}
-
-.pulse.delay-1 { animation-delay: 0.3s; }
-.pulse.delay-2 { animation-delay: 0.6s; }
-.pulse.delay-3 { animation-delay: 0.9s; }
-.pulse.delay-4 { animation-delay: 1.2s; }
-.pulse.delay-5 { animation-delay: 1.5s; }
-
-.footer {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+.courses-section h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  user-select: none;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
-  .skills-list {
+.courses-section ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.courses-section li {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.courses-section p {
+  margin: 0.5rem 0 1rem;
+  line-height: 1.5;
+}
+
+.courses-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.courses-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .about-section {
     flex-direction: column;
-    gap: 0.8rem;
   }
 
-  .container {
-    padding: 1.5rem 1.5rem;
-    margin: 2rem auto 4rem;
+  .about-image-wrapper {
+    max-width: 100%;
+    width: 100%;
   }
 
-  .intro p {
-    font-size: 1rem;
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
   }
 
-  h2, h3 {
-    font-size: 1.3rem;
+  .skills-list {
+    flex: 1 1 100%;
+    max-width: 400px;
+  }
+
+  .contacts-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 400px;
+    justify-content: flex-start;
   }
 }
