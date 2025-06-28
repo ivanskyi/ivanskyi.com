@@ -1,10 +1,69 @@
-<nav class="navbar">
-  <div class="navbar-left">
-    <div class="logo-text">Ivanskyi</div>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo-section">
+        <div class="logo-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="logo-text">Ivanskyi</div>
+      </div>
+    </div>
+
+    <div class="navbar-links">
+      <a routerLink="/"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Home
+      </a>
+      <a routerLink="/portfolio"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Portfolio
+      </a>
+      <a routerLink="/blog"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link"
+         (click)="closeMobileMenu()">
+        Blog
+      </a>
+    </div>
+
+    <button class="mobile-toggle"
+            [class.active]="isMobileMenuOpen"
+            (click)="toggleMobileMenu()"
+            aria-label="Toggle mobile menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
-  <div class="navbar-links">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a routerLink="/portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Portfolio</a>
-    <a routerLink="/blog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Blog</a>
+
+  <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+    <a routerLink="/"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Home
+    </a>
+    <a routerLink="/portfolio"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Portfolio
+    </a>
+    <a routerLink="/blog"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="nav-link"
+       (click)="closeMobileMenu()">
+      Blog
+    </a>
   </div>
 </nav>
