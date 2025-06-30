@@ -2,10 +2,7 @@
   <div class="navbar-container">
     <div class="navbar-left">
       <div class="logo-section">
-        <div class="logo-icon">
-          <i class="fas fa-code"></i>
-        </div>
-        <div class="logo-text">Ivanskyi</div>
+        <a routerLink="/" class="logo-text" (click)="closeMobileMenu()">Ivanskyi</a>
       </div>
     </div>
 
@@ -14,23 +11,17 @@
          routerLinkActive="active"
          [routerLinkActiveOptions]="{ exact: true }"
          class="nav-link"
-         (click)="closeMobileMenu()">
-        Home
-      </a>
+         (click)="closeMobileMenu()">Home</a>
       <a routerLink="/portfolio"
          routerLinkActive="active"
          [routerLinkActiveOptions]="{ exact: true }"
          class="nav-link"
-         (click)="closeMobileMenu()">
-        Portfolio
-      </a>
+         (click)="closeMobileMenu()">Portfolio</a>
       <a routerLink="/blog"
          routerLinkActive="active"
          [routerLinkActiveOptions]="{ exact: true }"
          class="nav-link"
-         (click)="closeMobileMenu()">
-        Blog
-      </a>
+         (click)="closeMobileMenu()">Blog</a>
     </div>
 
     <button class="mobile-toggle"
@@ -48,22 +39,16 @@
        routerLinkActive="active"
        [routerLinkActiveOptions]="{ exact: true }"
        class="nav-link"
-       (click)="closeMobileMenu()">
-      Home
-    </a>
+       (click)="closeMobileMenu()">Home</a>
     <a routerLink="/portfolio"
        routerLinkActive="active"
        [routerLinkActiveOptions]="{ exact: true }"
        class="nav-link"
-       (click)="closeMobileMenu()">
-      Portfolio
-    </a>
+       (click)="closeMobileMenu()">Portfolio</a>
     <a routerLink="/blog"
        routerLinkActive="active"
        [routerLinkActiveOptions]="{ exact: true }"
        class="nav-link"
-       (click)="closeMobileMenu()">
-      Blog
-    </a>
+       (click)="closeMobileMenu()">Blog</a>
   </div>
 </nav>

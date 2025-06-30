@@ -1,1 +1,11 @@
-Portfolio page
+<div class="portfolio-wrapper">
+  <h1 class="title">My Projects</h1>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <h2 class="project-title">{{ project.title }}</h2>
+      <p class="project-description">{{ project.description }}</p>
+      <a [href]="project.link" target="_blank" rel="noopener" class="project-link">View Project</a>
+    </div>
+  </div>
+</div>
