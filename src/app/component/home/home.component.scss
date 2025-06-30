@@ -8,7 +8,7 @@
 
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ffffff 0%, green 100%);
   display: flex;
   align-items: center;
   padding: 2rem 1rem;
@@ -181,7 +181,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #ffffff, green);
   border-radius: 2px;
 }
 
@@ -220,7 +220,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #ffffff, green);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -315,7 +315,7 @@
 .cert-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ffffff 0%, green 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -347,7 +347,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #667eea;
+  color: green;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -358,7 +358,7 @@
 }
 
 .cert-link:hover {
-  color: #764ba2;
+  color: green;
   transform: translateX(3px);
   background: rgba(102, 126, 234, 0.1);
 }
@@ -400,7 +400,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #ffffff, green);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -408,7 +408,7 @@
 .contact-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 25px 50px rgba(0, 0, 0, 0.06);
-  border-color: #667eea;
+  border-color: green;
 }
 
 .contact-card:hover::before {
@@ -418,7 +418,7 @@
 .contact-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ffffff 0%, green 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -446,14 +446,14 @@
 
 .contact-arrow {
   margin-left: auto;
-  color: #667eea;
+  color: green;
   transition: all 0.3s ease;
   font-size: 1.2rem;
 }
 
 .contact-card:hover .contact-arrow {
   transform: translateX(5px);
-  color: #764ba2;
+  color: green;
 }
 
 .scroll-indicator {
